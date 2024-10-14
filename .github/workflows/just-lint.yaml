@@ -1,0 +1,24 @@
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+name: Lint just files
+jobs:
+  just-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install just
+        uses: extractions/setup-just@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run just
+        shell: bash
+        run: |
+          # Run `--fmt` in 'check' mode. Exits with 0 if justfile is formatted correctly.
+          # Exits with 1 and prints a diff if formatting is required.
+          just --fmt --check --unstable
