@@ -10,7 +10,7 @@ brew upgrade="no":
     brew bundle --help > /dev/null 2>&1
 
     # install brew-bundled deps
-    if [[ "{{ upgrade_brew_deps }}" = "yes" ]]; then
+    if [[ "{{ upgrade }}" = "yes" ]]; then
         brew bundle install -v --file {{ justfile_directory() }}/recipes/modules/depends/config/Brewfile
     else
         brew bundle install -v --no-upgrade --file {{ justfile_directory() }}/recipes/modules/depends/config/Brewfile
