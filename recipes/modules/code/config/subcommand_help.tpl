@@ -10,10 +10,10 @@ TODO: Add description here
 
 # EXAMPLE
 
-~~~zsh
+```zsh
 just {{ (datasource "subcommand").parent }} {{ (datasource "subcommand").name }} ...
 Fill me out!
-~~~
+```
 
 # PARAMETERS
 
@@ -42,9 +42,9 @@ TODO: related environment variables or 'None'!
 
 # SEE ALSO
 
-~~~zsh
+```zsh
 TODO: related commands of note
-~~~
+```
 
 # AUTHOR
 

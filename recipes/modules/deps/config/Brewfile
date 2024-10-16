@@ -1,0 +1,9 @@
+tap "aws/tap"
+
+brew "awscli"
+brew "fzf"
+brew "gh"
+brew "glow"
+brew "gomplate"
+brew "jq"
+brew "just"
