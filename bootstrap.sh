@@ -7,6 +7,6 @@ if [[ $(command -v brew) == "" ]]; then
   /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-brew install just glow fzf
+brew install just glow fzf jq
 
 echo "Please add the following to your '~/.zshrc': 'export JUST_UNSTABLE=1'"
